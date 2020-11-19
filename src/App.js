@@ -67,7 +67,9 @@ function App() {
             </div>
           </div>
         </div>
-       
+        <div className="d-flex justify-content-center mt-5 align-items-center">
+          <div className="btn start-btn">Jogar</div>
+        </div>
       </div>
     </div>
   );
