@@ -1,68 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Custo Mínimo
 
-## Available Scripts
+**Número da Lista**: 4<br>
+**Conteúdo da Disciplina**: DP<br>
 
-In the project directory, you can run:
+## Alunos
 
-### `npm start`
+| Matrícula  | Aluno                        |
+| ---------- | ---------------------------- |
+| 17/0033066 | Esio Gustavo Pereira Freitas |
+| 17/0020461 | Pedro Henrique Andrade Feo   |
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Sobre
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Júlia estava em casa em um dia de chuva quando a energia caiu. Ela
+decidiu espalhar seus tabletes de numeros para formar uma matriz 5 x
+5 e assim começar a brincar. A brincadeira consiste em encontrar o
+custo mínimo para alcançar o último tablete da matriz a partir da
+primeira.
 
-### `npm test`
+## Screenshots
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- ![](https://github.com/projeto-de-algoritmos/Grafos2_viagem-a-negocios/blob/master/assets/img/Captura%20de%20tela%20de%202020-09-28%2018-39-40.png)
+![](https://github.com/projeto-de-algoritmos/Grafos2_viagem-a-negocios/blob/master/assets/img/Captura%20de%20tela%20de%202020-09-28%2018-41-01.png) -->
 
-### `npm run build`
+## Instalação
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Linguagem**: JavaScript<br>
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Fizemos o deploy da aplicação para facilitar o uso dela [AQUI](https://viagemanegocios.netlify.app/).
+No entanto, caso queira rodá-la, é necessário que possua instalado:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [Node](https://nodejs.org/en/) e
+- [yarn](https://yarnpkg.com/) ou
+- [npm](https://www.npmjs.com/)
 
-### `npm run eject`
+```ssh
+$ yarn install
+$ yarn start
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# pode ser usado também:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+$ npm install
+$ npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Uso
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+1. Selecione 2 estados
+2. Selecione "Definir melhor percurso"
+3. Para fazer um novo percurso, selecione "Fazer novo percurso"
