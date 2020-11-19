@@ -1,7 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
+  const [matrix, setMatrix] = useState([]);
+
+  useEffect(() => {
+    getRandomTabels();
+  }, []);
+
+  const getRandomTabels = () => {
+    setMatrix([
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+    ]);
+  };
+
   return (
     <div className="bg-light" style={{ height: "100vh" }}>
       <div className="container">
@@ -20,7 +56,18 @@ function App() {
             primeira.
           </p>
         </div>
-        <div className="row"></div>
+        <div className="row">
+          <div className="col d-flex justify-content-center mt-3">
+            <div className="grid">
+              {matrix.map((m) => (
+                <div className="tablet d-flex justify-content-center align-items-center">
+                  {m}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+       
       </div>
     </div>
   );
