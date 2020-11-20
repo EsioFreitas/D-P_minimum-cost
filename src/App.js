@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import generateCosts from './algorithms/generateCosts';
+import findMinCost from './algorithms/findMinCost';
 
 function App() {
   const [matrix, setMatrix] = useState([]);
@@ -12,8 +13,18 @@ function App() {
 
   function handleReset() {
     const costs = generateCosts();
-    console.log(costs)
-    setMatrix(costs);
+    setMatrix([
+      [4, 7, 8, 6, 4],
+      [6, 7, 3, 9, 2],
+      [3, 8, 1, 2, 4],
+      [7, 1, 7, 3, 7],
+      [2, 9, 8, 9, 3]
+    ]);
+  }
+
+  function handlePlay() {
+    const result = findMinCost(matrix, matrix.length, matrix[0].length)
+    console.log(result)
   }
 
   return (
@@ -41,7 +52,7 @@ function App() {
                   <div key={i+1} className="d-flex">
                     {
                       line.map((cost, j) => (
-                        <div key={j+1} className={`tablet d-flex justify-content-center align-items-center`}>
+                        <div key={j+1} className={`tablet d-flex justify-content-center align-items-center ${i + j === 0 ? 'start' : null} ${(i + 1) * (j + 1) === line.length * line.length ? 'finish': null}`}>
                           {cost}
                         </div>
                       ))
@@ -53,8 +64,8 @@ function App() {
           </div>
         </div>
         <div className="d-flex justify-content-center mt-5 align-items-center">
-          <button className="btn handle-btn reset-btn mr-5" onClick={handleReset}>Reset</button>
-          <button className="btn handle-btn start-btn">Jogar</button>
+          <button className="btn handle-btn finish mr-5" onClick={handleReset}>Reset</button>
+          <button className="btn handle-btn start" onClick={handlePlay}>Jogar</button>
         </div>
       </div>
     </div>
