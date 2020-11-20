@@ -7,6 +7,7 @@ import findPath from './algorithms/findPath';
 function App() {
   const [matrix, setMatrix] = useState([]);
   const [path, setPath] = useState([]);
+  const [result, setResult] = useState('--')
 
   useEffect(() => {
     newMap();
@@ -15,9 +16,11 @@ function App() {
 
   function handleReset() {
     setPath([])
+    setResult('--')
   }
 
   function newMap() {
+    handleReset()
     const costs = generateCosts();
     setMatrix(costs);
   }
@@ -26,6 +29,7 @@ function App() {
     const result = findMinCost(matrix, matrix.length, matrix[0].length)
     const path = findPath(result[1]);
     setPath(path);
+    setResult(result[0]);
   }
 
   function isInPath(i, j) {
@@ -61,6 +65,7 @@ function App() {
             primeira.
           </p>
         </div>
+        <h4 className="text-center bold" ><b>O menor caminho é {result}</b></h4>
         <div className="row">
           <div className="col d-flex justify-content-center mt-3">
             <div>
@@ -80,7 +85,6 @@ function App() {
           </div>
         </div>
         <div className="d-flex justify-content-center mt-5 align-items-center">
-          <button className="btn handle-btn finish mr-5" onClick={handleReset}>Reset</button>
           <button className="btn handle-btn finish mr-5" onClick={newMap}>Novo Mapa</button>
           <button className="btn handle-btn start" onClick={handlePlay}>Jogar</button>
         </div>

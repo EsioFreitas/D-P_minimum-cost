@@ -1,4 +1,5 @@
 export default function findPath(matrix) {
+    console.log(matrix)
     const lines = matrix.length;
     const columns = matrix[0].length;
 
@@ -10,9 +11,13 @@ export default function findPath(matrix) {
     while(i + j > 0) {
         path.push([i, j]);
 
-        if (matrix[i-1][j] <= matrix[i][j-1])
+        if (j === 0)
             i--;
-        else 
+        else if (i === 0)
+            j--;
+        else if (matrix[i-1][j] <= matrix[i][j-1])
+            i--;
+        else
             j--;
     }
     path.push([0, 0])
