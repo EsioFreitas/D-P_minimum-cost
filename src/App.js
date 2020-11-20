@@ -6,28 +6,41 @@ import findPath from './algorithms/findPath';
 
 function App() {
   const [matrix, setMatrix] = useState([]);
+  const [path, setPath] = useState([]);
 
   useEffect(() => {
-    handleReset();
+    newMap();
   }, []);
 
 
   function handleReset() {
+    setPath([])
+  }
+
+  function newMap() {
     const costs = generateCosts();
-    setMatrix([
-      [4, 7, 8, 6, 4],
-      [6, 7, 3, 9, 2],
-      [3, 8, 1, 2, 4],
-      [7, 1, 7, 3, 7],
-      [2, 9, 8, 9, 3]
-    ]);
+    setMatrix(costs);
   }
 
   function handlePlay() {
     const result = findMinCost(matrix, matrix.length, matrix[0].length)
     const path = findPath(result[1]);
-    console.log(result);
-    console.log(path);
+    setPath(path);
+  }
+
+  function isInPath(i, j) {
+    const index = path.findIndex(coord => coord[0] === i && coord[1] === j);
+    return index >= 0;
+  }
+
+  function getColor(i, j) {
+    if (i + j === 0)
+      return '#03787C';
+    else if (isInPath(i, j))
+      return '#03787C';
+    else if ((i + 1)*(j + 1) === matrix.length*matrix.length )
+      return '#e68057';
+    return '#fff';
   }
 
   return (
@@ -55,7 +68,7 @@ function App() {
                   <div key={i+1} className="d-flex">
                     {
                       line.map((cost, j) => (
-                        <div key={j+1} className={`tablet d-flex justify-content-center align-items-center ${i + j === 0 ? 'start' : null} ${(i + 1) * (j + 1) === line.length * line.length ? 'finish': null}`}>
+                        <div key={j+1} className="tablet d-flex justify-content-center align-items-center" style={{ backgroundColor: getColor(i, j)}}>
                           {cost}
                         </div>
                       ))
@@ -68,6 +81,7 @@ function App() {
         </div>
         <div className="d-flex justify-content-center mt-5 align-items-center">
           <button className="btn handle-btn finish mr-5" onClick={handleReset}>Reset</button>
+          <button className="btn handle-btn finish mr-5" onClick={newMap}>Novo Mapa</button>
           <button className="btn handle-btn start" onClick={handlePlay}>Jogar</button>
         </div>
       </div>
