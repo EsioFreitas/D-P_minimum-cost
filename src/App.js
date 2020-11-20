@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
+import generateCosts from './algorithms/generateCosts';
 
 function App() {
   const [matrix, setMatrix] = useState([]);
@@ -9,6 +10,8 @@ function App() {
   }, []);
 
   const getRandomTabels = () => {
+    const costs = generateCosts();
+    console.log(costs)
     setMatrix([
       1,
       2,
