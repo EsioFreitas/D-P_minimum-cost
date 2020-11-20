@@ -1,7 +1,7 @@
 .grid {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(5, 0fr);
-  gap: 0px;
+  gap: 0px; */
 }
 
 .tablet {
