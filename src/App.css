@@ -19,11 +19,10 @@
   font-weight: bold;
 }
 
-.start-btn {
+.handle-btn {
   width: 30%;
   border: none;
   box-shadow: 1px 1px 2px #353535;
-  background-color: #03787c;
   height: 3rem;
   border-radius: 5rem;
   letter-spacing: 0.5rem;
@@ -36,9 +35,26 @@
   transition: all 0.5s;
 }
 
+.start-btn {
+  background-color: #03787c;
+}
+
 .start-btn:active,
 .start-btn:hover {
+  background-color: #086a6d;
+}
+
+.reset-btn {
+  background-color: #e68057;
+}
+
+.reset-btn:active,
+.reset-btn:hover {
+  background-color: #ad5f40;
+}
+
+.handle-btn:active,
+.handle-btn:hover {
   transition: all 0.5s;
   box-shadow: 1px 1px 5px #353535;
-  background-color: #086a6d;
 }

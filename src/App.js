@@ -6,14 +6,15 @@ function App() {
   const [matrix, setMatrix] = useState([]);
 
   useEffect(() => {
-    getRandomTabels();
+    handleReset();
   }, []);
 
-  const getRandomTabels = () => {
+
+  function handleReset() {
     const costs = generateCosts();
     console.log(costs)
     setMatrix(costs);
-  };
+  }
 
   return (
     <div className="bg-light" style={{ height: "100vh" }}>
@@ -36,11 +37,11 @@ function App() {
         <div className="row">
           <div className="col d-flex justify-content-center mt-3">
             <div>
-              {matrix.map((line, index) => (
-                  <div key={index} className="d-flex">
+              {matrix.map((line, i) => (
+                  <div key={i+1} className="d-flex">
                     {
-                      line.map((cost, index) => (
-                        <div key={cost*index} className="tablet d-flex justify-content-center align-items-center">
+                      line.map((cost, j) => (
+                        <div key={j+1} className={`tablet d-flex justify-content-center align-items-center`}>
                           {cost}
                         </div>
                       ))
@@ -52,7 +53,8 @@ function App() {
           </div>
         </div>
         <div className="d-flex justify-content-center mt-5 align-items-center">
-          <div className="btn start-btn">Jogar</div>
+          <button className="btn handle-btn reset-btn mr-5" onClick={handleReset}>Reset</button>
+          <button className="btn handle-btn start-btn">Jogar</button>
         </div>
       </div>
     </div>
