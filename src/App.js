@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import generateCosts from './algorithms/generateCosts';
 import findMinCost from './algorithms/findMinCost';
+import findPath from './algorithms/findPath';
 
 function App() {
   const [matrix, setMatrix] = useState([]);
@@ -24,7 +25,9 @@ function App() {
 
   function handlePlay() {
     const result = findMinCost(matrix, matrix.length, matrix[0].length)
-    console.log(result)
+    const path = findPath(result[1]);
+    console.log(result);
+    console.log(path);
   }
 
   return (
