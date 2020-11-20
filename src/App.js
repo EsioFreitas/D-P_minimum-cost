@@ -11,6 +11,7 @@ function App() {
 
   useEffect(() => {
     newMap();
+    // eslint-disable-next-line
   }, []);
 
 
@@ -59,8 +60,8 @@ function App() {
           </h1>
           <p>
             Júlia estava em casa em um dia de chuva quando a energia caiu. Ela
-            decidiu espalhar seus tabletes de numeros para formar uma matriz 5 x
-            5 e assim começar a brincar. A brincadeira consiste em encontrar o
+            decidiu espalhar seus tabletes de numeros para formar uma matriz N x
+            M e assim começar a brincar. A brincadeira consiste em encontrar o
             custo mínimo para alcançar o último tablete da matriz a partir da
             primeira.
           </p>
