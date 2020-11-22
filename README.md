@@ -13,21 +13,25 @@
 ## Sobre
 
 Júlia estava em casa em um dia de chuva quando a energia caiu. Ela
-decidiu espalhar seus tabletes de numeros para formar uma matriz 5 x
-5 e assim começar a brincar. A brincadeira consiste em encontrar o
+decidiu espalhar seus tabletes de numeros para formar uma matriz N x
+M e assim começar a brincar. A brincadeira consiste em encontrar o
 custo mínimo para alcançar o último tablete da matriz a partir da
 primeira.
 
+## Apresentação
+
+Um vídeo da apresentação pode ser encontrado [AQUI](https://github.com/projeto-de-algoritmos/D-P_minimum-cost/blob/master/assets/apresentacao.mp4).
+
 ## Screenshots
 
-<!-- ![](https://github.com/projeto-de-algoritmos/Grafos2_viagem-a-negocios/blob/master/assets/img/Captura%20de%20tela%20de%202020-09-28%2018-39-40.png)
-![](https://github.com/projeto-de-algoritmos/Grafos2_viagem-a-negocios/blob/master/assets/img/Captura%20de%20tela%20de%202020-09-28%2018-41-01.png) -->
+![](https://raw.githubusercontent.com/projeto-de-algoritmos/D-P_minimum-cost/master/assets/Screenshot%20from%202020-11-22%2014-56-17.png)
+![](https://raw.githubusercontent.com/projeto-de-algoritmos/D-P_minimum-cost/master/assets/Screenshot%20from%202020-11-22%2014-56-34.png)
 
 ## Instalação
 
 **Linguagem**: JavaScript<br>
 
-Fizemos o deploy da aplicação para facilitar o uso dela [AQUI](https://viagemanegocios.netlify.app/).
+Fizemos o deploy da aplicação para facilitar o uso dela [AQUI](https://minimun-cost.netlify.app/).
 No entanto, caso queira rodá-la, é necessário que possua instalado:
 
 - [Node](https://nodejs.org/en/) e
@@ -46,6 +50,5 @@ $ npm start
 
 ## Uso
 
-1. Selecione 2 estados
-2. Selecione "Definir melhor percurso"
-3. Para fazer um novo percurso, selecione "Fazer novo percurso"
+1. Aperte o botão 'Novo Mapa' para escolher o mapa de custos
+2. Aperte o Botão 'Jogar' para descobrir o melhor caminho
