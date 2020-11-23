@@ -4,6 +4,7 @@ import generateCosts from "./algorithms/generateCosts";
 import findMinCost from "./algorithms/findMinCost";
 import findPath from "./algorithms/findPath";
 
+const 
 function App() {
   const [matrix, setMatrix] = useState([]);
   const [path, setPath] = useState([]);
@@ -11,7 +12,6 @@ function App() {
 
   useEffect(() => {
     newMap();
-    // eslint-disable-next-line
   }, []);
 
   function handleReset() {
