@@ -4,7 +4,9 @@ import generateCosts from "./algorithms/generateCosts";
 import findMinCost from "./algorithms/findMinCost";
 import findPath from "./algorithms/findPath";
 
-const 
+const BLUE_COLOR = "#03787C";
+const ORANGE_COLOR = "#e68057";
+
 function App() {
   const [matrix, setMatrix] = useState([]);
   const [path, setPath] = useState([]);
@@ -38,10 +40,10 @@ function App() {
   }
 
   function getColor(i, j) {
-    if (i + j === 0) return "#03787C";
-    else if (isInPath(i, j)) return "#03787C";
+    if (i + j === 0) return "BLUE_COLOR";
+    else if (isInPath(i, j)) return "BLUE_COLOR";
     else if ((i + 1) * (j + 1) === matrix.length * matrix.length)
-      return "#e68057";
+      return "ORANGE_COLOR";
     return "#fff";
   }
 
@@ -51,7 +53,7 @@ function App() {
         <div className="text-center mb-4 pt-4" style={{ color: "#353535" }}>
           <h1 className="mb-3">
             Projeto{" "}
-            <span className="bold-text" style={{ color: "#03787C" }}>
+            <span className="bold-text" style={{ color: "BLUE_COLOR" }}>
               Custo Mínimo
             </span>
           </h1>
