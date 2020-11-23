@@ -48,7 +48,7 @@ $ npm install
 $ npm start
 ```
 
-## Uso
+## Uso 
 
 1. Aperte o botão 'Novo Mapa' para escolher o mapa de custos
 2. Aperte o Botão 'Jogar' para descobrir o melhor caminho
